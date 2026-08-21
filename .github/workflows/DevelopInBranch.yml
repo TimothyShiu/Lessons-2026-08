@@ -1,0 +1,12 @@
+# workflow to show how to develop in a branch and merge to main/master
+name: Develop In Branch
+on: [pull_request, workflow_dispatch]
+jobs:
+  show-branch-info:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "current branch is '${{ github.ref }}'."
+          echo "My secret is '${{ secrets.MY_SECRET }}'. "
+          echo "This workflow is triggered by event '${{ github.event_name }}'."
+          echo "This workflow is triggered by actor '${{ github.actor }}'."
