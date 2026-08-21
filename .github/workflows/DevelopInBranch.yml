@@ -2,17 +2,11 @@
 name: Develop In Branch
 on: [pull_request, workflow_dispatch]
 jobs:
-  job1:
-    name: Develop In Branch
+  show-branch-info:
     runs-on: ubuntu-latest
     steps:
-#             - name: Checkout
-#        uses: actions/checkout@v6.1.0
       - run: |
-          echo "Hello ${{ vars.WHO_TO_GREET}} 🌏🤗 from ${{github.actor}}."
           echo "current branch is '${{ github.ref }}'."
           echo "My secret is '${{ secrets.MY_SECRET }}'. "
           echo "This workflow is triggered by event '${{ github.event_name }}'."
           echo "This workflow is triggered by actor '${{ github.actor }}'."
-          echo "This workflow is triggered by action '${{ github.action }}'."
-      - run: tree
