@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6.1.0
+#        uses: actions/checkout@v6.1.0
       - run: |
           echo "Hello ${{ vars.WHO_TO_GREET}} 🌏🤗 from ${{github.actor}}."
           echo "current branch is '${{ github.ref }}'."
