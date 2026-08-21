@@ -6,7 +6,7 @@ jobs:
     name: Develop In Branch
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+#             - name: Checkout
 #        uses: actions/checkout@v6.1.0
       - run: |
           echo "Hello ${{ vars.WHO_TO_GREET}} 🌏🤗 from ${{github.actor}}."
